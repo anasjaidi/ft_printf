@@ -10,8 +10,8 @@ all: $(NAME)
 $(NAME):$(OBJS)
 	ar -cr $(NAME) $(OBJS) 
 
-%.o:%.c
-	cc $(CFLAGS) -o $@ -c $^
+%.o:%.c ft_printf.h
+	cc $(CFLAGS) -o $@ -c $<
 
 clean:
 	rm -rf $(OBJS)

@@ -34,7 +34,7 @@ int	print_number(int nb)
 	return (len);
 }
 
-int	print_adr(long long nb)
+int	print_adr(unsigned long int nb)
 {
 	int	len;
 
@@ -100,7 +100,7 @@ int	print_str(char	*str)
 
 	len = 0;
 	if (!str)
-		return (0);
+		str = "(null)";
 	while (*str)
 		len += write(1, str++, 1);
 	return (len);

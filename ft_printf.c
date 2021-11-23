@@ -40,14 +40,14 @@ int	ft_checker(char c, va_list *ptr)
 	if (c == 'p')
 	{
 		len += write(1, "0x", 2);
-		len += print_adr(va_arg(*ptr, long long));
+		len += print_adr(va_arg(*ptr, unsigned long int));
 	}
 	if (c == 's')
 		len += print_str(va_arg(*ptr, char *));
 	return (len);
 }
 
-int	ft_printf(char *format, ...)
+int	ft_printf(const char *format, ...)
 {
 	int		len;
 	int		i;
